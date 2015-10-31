@@ -1,0 +1,27 @@
+name: GroupBot
+author: ivw
+description: Helps you install & use plugins and correctly run a server!
+main: com.google.android.groupbot
+website: www.groupbotmc.com
+version: 1.0.9 Alpha 
+commands:
+ hi:
+  description: Sends a message of "hi" to a player
+ gb: 
+  description: Opens the GroupBot plugin help menu 
+ gbmenu:
+  description: Gives the player the GroupBot menu 
+ totalexp: 
+  description: Tells the player how much Experience points they have
+ exp:
+  description: Tells how much EXP is required to get to the next level
+ gbversion:
+  description: Tells you which version of GroupBot you are using
+ gbweb:
+  description: Gives the link to the GroupBot website for help & info
+ gbessentials:
+  description: Opens the GroupBot essentials help menu
+ gbitems:
+  description: Opens the GroupBot items list link
+ gbgui:
+  description: Opens the GroupBot Bukkit GUI menu  

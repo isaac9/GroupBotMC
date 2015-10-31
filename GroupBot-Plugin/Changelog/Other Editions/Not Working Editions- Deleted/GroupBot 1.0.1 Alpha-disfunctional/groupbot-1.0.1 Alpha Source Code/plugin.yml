@@ -1,0 +1,9 @@
+name: GroupBot
+main: com.google.android.groupbot
+website: www.groupbotmc.com
+version: 1.0.1 Alpha help test
+commands:
+ hi:
+  description: sends a message of "hi" to a player
+ ghelp:
+  description: Opens the GroupBot help menu 
