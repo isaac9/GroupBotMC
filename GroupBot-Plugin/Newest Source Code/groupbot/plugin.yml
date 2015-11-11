@@ -1,0 +1,85 @@
+name: GroupBot
+author: ivw
+description: Helps you install & use plugins and correctly run a server!
+main: com.google.android.groupbot
+website: www.groupbotmc.com
+version: 1.1.5 Alpha 
+commands:
+ gboptimize:
+  description: Opens the GroupBot menu for Optimize
+  usage: /<command>
+  permission: gb.admin
+  permission-message: You don't have gb.admin   
+ gbptweaks:
+  description: Opens the GroupBot menu for PTweaks
+  usage: /<command>
+  permission: gb.admin
+  permission-message: You don't have gb.admin   
+ gbclearlagg:
+  description: Opens the GroupBot menu for ClearLagg
+  usage: /<command>
+  permission: gb.admin
+  permission-message: You don't have gb.admin   
+ gbnametag:
+  description: Opens the GroupBot menu for NameTagEdit
+  usage: /<command>
+  permission: gb.admin
+  permission-message: You don't have gb.admin 
+ gbroadcaster:
+  description: Opens the GroupBot menu for AutoBroadcaster
+  usage: /<command>
+  permission: gb.admin
+  permission-message: You don't have gb.admin
+ gbscorestats:
+  description: Opens the GroupBot menu for ScoreBoardStats
+  usage: /<command>
+  permission: gb.admin
+  permission-message: You don't have gb.admin
+ gbmenu:
+  description: Opens the GroupBot commands menu
+  usage: /<command>
+  permission: gb.admin
+  permission-message: You don't have gb.admin
+ hi:
+  description: Sends a message of "hi" to a player
+  usage: /<command>
+ buildtools:
+  description: Opens the GroupBot BuildTools menu
+  usage: /<command> 
+  permission: gb.admin
+  permission-message: You don't have gb.admin
+ gb: 
+  description: Opens the GroupBot menu 
+  permission: gb.admin
+  permission-message: You don't have gb.admin
+ totalexp: 
+  description: Tells the player how much Experience points they have
+  usage: /<command>
+ exp:
+  description: Tells how much EXP is required to get to the next level
+  usage: /<command>
+ gbversion:
+  description: Tells you which version of GroupBot you are using
+  usage: /<command>
+  permission: gb.admin
+  permission-message: You don't have perm gb.admin
+ gbweb:
+  description: Gives the link to the GroupBot website for help & info
+  usage: /<command>
+  permission: gb.admin
+  permission-message: You don't have perm gb.admin
+ gbessentials:
+  description: Opens the GroupBot essentials help menu
+  usage: /<command>
+  permission: gb.admin
+  permission-message: You don't have perm gb.admin
+ gbitems:
+  description: Opens the GroupBot items list link
+  usage: /<command>
+  permission: gb.admin
+  permission-message: You don't have perm gb.admin
+ gbgui:
+  description: Opens the GroupBot Bukkit GUI menu  
+  usage: /<command>
+  permission: gb.admin
+  permission-message: You don't have gb.admin

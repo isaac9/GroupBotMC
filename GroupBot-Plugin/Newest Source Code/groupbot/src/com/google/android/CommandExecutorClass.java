@@ -1,6 +1,5 @@
 package com.google.android;
 
-import java.util.Arrays;
 import java.util.List;
 
 import org.bukkit.Material;
@@ -10,9 +9,11 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.permissions.Permission;
 
 public class CommandExecutorClass implements CommandExecutor {
 	public final groupbot plugin;
+	public Permission playerPermission = new Permission("gb.admin");
 	
 	public CommandExecutorClass(groupbot plugin) {
 		this.plugin = plugin;
@@ -25,10 +26,10 @@ public class CommandExecutorClass implements CommandExecutor {
 			p.sendMessage("Hi!");
 	}
 		//Handles the GroupBot Main menu
-		if(label.equalsIgnoreCase("gb")){
+		if(label.equalsIgnoreCase("gbmenu")){
 			Player p = (Player) sender;
+			if(p.hasPermission("gb.admin")){
 			p.sendMessage("\u00A7c\u00A7lWelcome to the \u00A7b[GroupBot] \u00A7c\u00A7lplugin helper!-----------");
-			p.sendMessage("\u00A77GroupBot developed by ivw");
 			p.sendMessage("\u00A71\u00A7l-\u00A7etype \u00A7c/plugins \u00A7efor  list of correctly installed plugins");
 			p.sendMessage("\u00A71\u00A7l-\u00A7etype \u00A7c/gbmenu \u00A7efor the GroupBot menu rod");
 			p.sendMessage("\u00A71\u00A7l-\u00A7etype \u00A7c/totalexp \u00A7efor your total experience points");
@@ -37,14 +38,7 @@ public class CommandExecutorClass implements CommandExecutor {
 			p.sendMessage("\u00A71\u00A7l-\u00A7etype \u00A7c/gbweb\u00A7efor the website link");
 			p.sendMessage("\u00A71\u00A7l-\u00A7eType \u00A7c/gbessentials \u00A7efor download, install, or tutorial help for essentials ");
 			p.sendMessage("\u00A71\u00A7l-\u00A7eType \u00A7c/gbitems \u00A7efor an item ids list");
-		}	
-		//Handles the GroupBot help menu
-		if(label.equalsIgnoreCase("gbmenu")){
-			ItemStack newItem = setMeta(new ItemStack(Material.BLAZE_ROD), "\u00A74\u00A7lGroupBot Menu", Arrays.asList("\u00A7cDo \u00A75/gp \u00A7cto open the GroupBot Menu" , "\u00A7cThe GroupBot menu will apear in the chat!" , "\u00A7eA menu funtion for this will be available upon release"));
-			((Player)sender).getInventory().addItem(newItem);
-			Player p = (Player) sender;
-			p.sendMessage("\u00A74\u00A7lDon't Worry \u00A7cthe inventory menu will be fuctional once GroupBot hits its release stage in development!");
-			p.sendMessage("\u00A76As of now do \u00A75/gb \u00A76to access the groupbot menu");
+			}
 		}
 		//Tells the player how much EXP points they have, or need to have to level up 
 		if(label.equalsIgnoreCase("totalexp") && sender instanceof Player) {
