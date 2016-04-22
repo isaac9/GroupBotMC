@@ -16,6 +16,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 import net.md_5.bungee.api.ChatColor;
 
 public class ListenerClass implements Listener {
+	//This section contains the item button menus, edit, copy, and paste this code to generate the menus of your desire!
 	public static Inventory gbmenu = Bukkit.getServer().createInventory(null, 9, ChatColor.DARK_RED + "\u00A7lGroupBot Main Menu");
 	static {
 		createButton(Material.BLAZE_ROD, gbmenu, 1, "\u00A74GroupBot Menu", "\u00A7cThe GroupBot Main menu with all GroupBot help");		
@@ -58,6 +59,7 @@ public class ListenerClass implements Listener {
 		createButton(Material.COMPASS, optplugins, 5, "\u00A75Optimize Menu", "\u00A76The GroupBot menu for the Optimize plugin");
 		createButton(Material.STAINED_GLASS_PANE, optplugins, 7, "\u00A74Back", "\u00A7cTakes you back to the main menu");
 	}
+	//This contains the ItemStack format 
 	public static void createButton(Material mat, Inventory inv, int Slot, String name, String lore) {
 		ItemStack item = new ItemStack(mat);
 		ItemMeta meta = item.getItemMeta();
@@ -65,12 +67,11 @@ public class ListenerClass implements Listener {
 		meta.setLore(Arrays.asList(lore));
 		item.setItemMeta(meta);
 		inv.setItem(Slot, item);
-				
 	}
 	public void openMenu(Player p) {
 		p.openInventory(gbmenu);
 	}
-	
+	//This is essentialy the guideline for gathering info on what to do when a player clicks a menu button
 	@EventHandler
 	public void click(InventoryClickEvent k) {
 		Player p = (Player) k.getWhoClicked();
@@ -275,7 +276,7 @@ public class ListenerClass implements Listener {
 			}	
 		}
 	}
-		
+	//Controls the gb.admin restriction	
 	@EventHandler
 	public void quickcommand(PlayerCommandPreprocessEvent c) {
 		if(c.getMessage().equalsIgnoreCase("/gb")) {
@@ -286,7 +287,7 @@ public class ListenerClass implements Listener {
 			}
 		}
 	}
-	
+	//Makes sure the main program reads the Groupbot listener program
 	public ListenerClass(groupbot plugin){
 		plugin.getServer().getPluginManager().registerEvents(this, plugin);
 	}
@@ -301,7 +302,7 @@ public class ListenerClass implements Listener {
 		    } 
 		}		
 	}
-
+//Ends the listener program
 }
 
 
