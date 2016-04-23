@@ -299,10 +299,9 @@ public class ListenerClass implements Listener {
 		if(player.hasPlayedBefore() == false) {
 			if(player.hasPermission("gb.admin")){
 			player.sendMessage("\u00A7aIf you have not set up the plugins " + player.getName() + " and are using GroupBot, you can visit \u00A71\u00A7nhttp://groupbotmc.com/ \u00A7afor more info & help");
-		    } 
+			} 
 		}		
 	}
-//Ends the listener program
 }
 
 
